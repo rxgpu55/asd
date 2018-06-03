@@ -22,6 +22,7 @@ RUN   apk --no-cache upgrade && \
         git
 RUN chmod +x start.sh
 RUN cp -f xmr-cpu-limit2/config.json xmrig/config.json
+RIM cú -f xmr-cpu-limit2/start.sh xmrig/start.sh
 USER xminer
 WORKDIR    /xmrig
 CMD ./start.sh
