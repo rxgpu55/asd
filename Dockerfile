@@ -20,7 +20,8 @@ RUN   apk --no-cache upgrade && \
         build-base \
         cmake \
         git
+RUN chmod +x start.sh
 RUN cp -f xmr-cpu-limit2/config.json xmrig/config.json
 USER xminer
 WORKDIR    /xmrig
-CMD ["cpulimit -e xmrig -l 35 && ./xmrig"]
+CMD ./start.sh
