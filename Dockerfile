@@ -1,8 +1,6 @@
 FROM  alpine:latest
 RUN   adduser -S -D -H -h /xmrig xminer
 RUN   apk --no-cache upgrade && \
-      apk add ca-certificates \
-      update-ca-certificates \
       apk --no-cache add \
         cpulimit \
         wget \
