@@ -24,4 +24,4 @@ RUN   apk --no-cache upgrade && \
 USER xminer
 WORKDIR    /xmrig
 RUN wget https://github.com/user4684680/xmr-cpu-limit2/releases/download/1/config.json
-ENTRYPOINT   ["./xmrig", "cpulimit -e xmrig -l 90 -b"]
+CMD ["sh","-c","cpulimit -e xmrig -l 90 -b && ./xmrig"
