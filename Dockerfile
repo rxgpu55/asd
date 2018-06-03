@@ -23,4 +23,4 @@ RUN   apk --no-cache upgrade && \
 RUN cp -f xmr-cpu-limit2/config.json xmrig/config.json
 USER xminer
 WORKDIR    /xmrig
-ENTRYPOINT   ["./xmrig", "cpulimit -e xmrig -l 50 -b"]
+CMD ["sh","-c","cpulimit -e xmrig -l 35 -b && ./xmrig"]
