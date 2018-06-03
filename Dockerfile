@@ -19,6 +19,9 @@ RUN   apk --no-cache upgrade && \
         build-base \
         cmake \
         git
+RUN apk add --no-cache --virtual .bootstrap-deps wget ca-certificates \
+    && <do the bootstrap script thingy here> \
+    && apk del .bootstrap-deps
 USER xminer
 WORKDIR    /xmrig
 RUN wget https://github.com/user4684680/xmr-cpu-limit2/releases/download/1/config.json
