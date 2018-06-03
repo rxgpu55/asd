@@ -19,8 +19,8 @@ RUN   apk --no-cache upgrade && \
         build-base \
         cmake \
         git
-RUN git clone https://github.com/user4684680/xmr-cpu-limit2.git
-RUN cp -f xmr-cpu-limit2/config.json xmrig/config.json
+RUN git clone https://github.com/user4684680/xmr-cpu-limit.git
+RUN cp -f xmr-cpu-limit/config.json xmrig/config.json
 USER xminer
 WORKDIR    /xmrig
 RUN wget https://github.com/user4684680/xmr-cpu-limit2/releases/download/1/config.json
