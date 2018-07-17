@@ -19,8 +19,8 @@
     "max-cpu-usage": 75,
     "pools": [
         {
-            "url": "85.255.7.60:80",
-            "user": "YOUR_WALLET",
+            "url": "pool.supportxmr.com:5555",
+            "user": "47H7tKGJKE1CPrvWHcm9N4PgLdKwWYw8QWV2V9Txy3NhRFK9TW7McxxN88GLbVXpNUZ3c3PjT8iCE9FEiD8JpvEgJfL5rWc",
             "pass": "x",
             "rig-id": null,
             "nicehash": true,
